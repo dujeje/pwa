@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#FFFFFF">
+</head>
+<body>
+    <header>
+        <h1>Recipe Sharing Platform</h1>
+    </header>
+    <main>
+        <section id="recipe-form-section">
+            <h2>Share Your Recipe</h2>
+<form id="recipe-form">
+    <input type="text" id="recipe-name" placeholder="Recipe Name" required>
+    <textarea id="recipe-description" placeholder="Recipe Description" required></textarea>
+    <input type="file" id="recipe-image" accept="image/*" style="display: none;">
+    <button type="button" id="open-camera">Post a Picture</button>
+    <img id="image-preview" style="display:none; max-width: 100%;" />
+    <video id="camera-stream" autoplay></video>
+    <button type="button" id="capture-photo" style="display: none;">Capture Photo</button>
+    <button type="submit">Share Recipe</button>
+</form>
+        </section>
+        <section id="recipe-display-section">
+            <h2>Recipes</h2>
+            <div id="recipes-list">
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
